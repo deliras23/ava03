@@ -1,0 +1,18 @@
+body {
+    background-image: linear-gradient(to left, #000000,#32e27f,#155a32,#000000);
+}
+ main {
+     background-color: rgb(255, 255, 255);
+     padding: 8px;
+     border-radius: 6px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     width: 420px;
+     margin: auto;
+
+ }
+ img {
+     padding: 10px;
+     width: auto;
+     border-radius: 200px;
+     
+ }
