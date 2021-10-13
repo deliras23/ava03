@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarto trabalho JS</title>
-    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+   
 </head>
 <body>
-    <main>
+    
         <h1>Veja seus descontos aqui</h1>
         <button onclick="calcular()">Calcule</button>
-    </main>
-    
+   
     <script>
         function calcular() {
             let preco = Number(prompt("Qual o preço do produto"))
-            document.writeln = (`<h1> O preço original: R$${preco} </h1>`)
+            document.writeln(`<h1> O preço original: R$${preco} </h1>`)
+            let porc = 10
+            while ( porc <=90) {
+                document.writeln(`O produto - ${porc}% = ${(preco*porc)-/100 } </br>`)
+                porc += 10
+            }
             
-           
         }
     </script>
 </body>
