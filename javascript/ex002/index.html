@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping em JS</title>
+    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo002.css">
+</head>
+<body>
+    <h1>Testando looping</h1>
+    <button onclick="contar()">Vai</button>
+
+    <script>
+        function contar() {
+            let inicio = Number(prompt("Número Inicial"))
+            let fim = Number(prompt("Número final"))
+            let n = inicio
+            if (inicio < fim) {
+                document.writeln(`<h1>Contagem crescente de ${inicio} a ${fim}<h1> `)
+                while (n <= fim ) {
+                document.writeln(`Looping ${n} <br> `)
+                n ++
+            } } else  {
+                document.writeln(`<h1>Contagem regressiva de ${inicio} a ${fim} </h1>`)
+                while (n > fim) 
+                n--
+            }
+            document.writeln("FIM")
+            }
+            
+        }
+    </script>
+</body>
+</html>
