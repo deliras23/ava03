@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto trabalho JS</title>
+    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Veja seus descontos aqui</h1>
+        <button onclick="calcular()">Calcule</button>
+    </main>
+    
+    <script>
+        function calcular() {
+            let preco = Number(prompt("Qual o preço do produto"))
+            document.writeln = (`<h1> O preço original: R$${preco} </h1>`)
+            
+           
+        }
+    </script>
+</body>
+</html>
