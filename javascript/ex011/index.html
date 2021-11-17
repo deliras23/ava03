@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="meuestilo.css">
+</head>
+<body>
+    <main>
+        <h1>Cadastre seus amigos</h1>
+        <button onclick="clicou()">CLIQUE AQUI</button>
+        <p id="listagem">Listagem dos seus amigos</p>
+    </main>
+
+    <script>
+        let amigos = new Array()
+        let idades = new Array()
+
+        let lst = document.getElementById("listagem")
+
+        function clicou() {
+            let nome
+            let idade
+            let resposta
+            do {
+                nome = prompt("Digite o nome do amigo")
+                idade = Number(prompt(`Qual a idade de ${amigos}`))
+
+                amigos.push(nome)
+                idades.push(idade)
+
+                resposta = confirm("Quer cadastrar mais amigos?")
+            }while(resposta == true)
+            lst.innerHTML = ""
+            let pos = 0
+            while (pos < amigos.length) {
+                lst.innerHTML += `${amigos[pos]} tem ${idades[pos]} anos de idade. <br>`
+                pos ++
+            }
+        }
+    </script>
+</body>
+</html>

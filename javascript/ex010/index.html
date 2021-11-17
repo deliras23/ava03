@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vetores</title>
+    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <main>
         <h1>Sorteio de nomes</h1>
+        <p id="participantes">Os participantes</p>
+        <button onclick="sortear()">Sortear</button>
+        <p id="vencedor">Vencedores</p>
     </main>
     
+    <script>
+        let pessoas = new Array("José","Ana Pauala","João","Maria","Pedro" )
+        let p = document.getElementById("participantes")
+        let v = document.getElementById("vencedor")
+
+        p.innerHTML = `Participam don sorteio: ${pessoas.toString()}`
+
+        function sortear() {
+            let min = 0
+            let max = pessoas.length
+            let num = Math.floor(Math.random() * max + min )
+
+            v.innerHTML = `O sorteado foi ${pessoas[num]}`
+        }
+    </script>
 </body>
 </html>
