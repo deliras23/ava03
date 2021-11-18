@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação 3° Etapa</title>
+    <link rel="shortcut icon" href="controle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main>
+        <section>
+            <form action="salvar.php" method="get" onsubmit="return calcular()">
+                <h1>Parcelador</h1>
+                <p>Digite o modelo do veículo</p>
+                <label for="mod">MODELO</label>
+                <br><input type="text" name="mod" id="mod" >
+                <br><label for="prec">PREÇO</label>
+                <br><input type="number" name="prec" id="prec">
+                <br><label for="parc">PARCELAS</label>
+                <br><input type="number" name="parc" id="parc" min="0" max="36">
+                <br><input type="submit" value="Calcular Parcelas">
+            </form>
+        </section>
+        <section id="saida">
+            <h2>Preço final das parcelas</h2>
+            <p id="precf">O valor final da tarefa irá aparecer aqui</p>
+        </section>
+    </main>
+
+    <script>
+        let pref = document.getElementById("precf")
+
+        function calcular() {
+              let mod = document.getElementById("mod")
+              let prec = Number.getElementById("prec")
+              let parc = Number.getElementById("parc")
+        }
+    </script>
+    
+ 
+</body>
+</html>
