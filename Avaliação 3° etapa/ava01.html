@@ -13,6 +13,9 @@
         <section>
             <form action="salvar.php" method="get" onsubmit="return calcular()">
                 <h1>Parcelador</h1>
+
+                <i><b>Se quer acessar a segunda atividade acesse link a seguir <a href="AVA02.html"> AVA02</a> e irá para a página secundária do site</b></i>
+                
                 <p>Digite o modelo do veículo</p>
                 <label for="mod">MODELO</label>
                 <br><input type="text" name="mod" id="mod" >
@@ -21,6 +24,7 @@
                 <br><label for="parc">PARCELAS</label>
                 <br><input type="number" name="parc" id="parc" min="0" max="36">
                 <br><input type="submit" value="Calcular Parcelas">
+                             
             </form>
         </section>
         <section id="saida">
@@ -36,6 +40,11 @@
               let mod = document.getElementById("mod")
               let prec = Number.getElementById("prec")
               let parc = Number.getElementById("parc")
+
+//IF valor >=5 AND valor <= 12
+              if (parc >= 5 <=12)
+                pref.innerHTML = `O valor da sua compra final seria ${prec} mas como você selecionou entr 5 e 12 parcelas será aplicado um juros de 25% e o preço se tornará ${prec * 25/ 100}`
+
         }
     </script>
     
