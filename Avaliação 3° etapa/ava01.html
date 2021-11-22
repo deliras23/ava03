@@ -29,24 +29,25 @@
         </section>
         <section id="saida">
             <h2>Preço final das parcelas</h2>
-            <p id="precf">O valor final da tarefa irá aparecer aqui</p>
+            <p id="resultado">O valor final da tarefa irá aparecer aqui</p>
         </section>
     </main>
-
     <script>
-        let pref = document.getElementById("precf")
+        let resultado = document.getElementById("resultado")
 
-        function calcular() {
-              let mod = document.getElementById("mod")
-              let prec = Number.getElementById("prec")
-              let parc = Number.getElementById("parc")
-
-//IF valor >=5 AND valor <= 12
-              if ((parc < 5 ) 
-                pref.innerHTML = `O valor da sua compra final seria ${prec} mas como você selecionou entr 5 e 12 parcelas será aplicado um juros de 25% e o preço se tornará ${prec * 25/ 100}`
-
+        function calcular () {
+            let mod = document.getElementById("mod")
+            let prec = Number(document.getElementById("prec").value)
+            let parc = Number(document.getElementById("parc").value)
+            let juros = (prec * porc) / parc
+            let porc = 0 
+            if (parc < 5)
+                resultado.innerHTML = `O valor da compra será ${prec}`
         }
+
     </script>
+
+
     
  
 </body>
