@@ -14,16 +14,16 @@
             <form action="salvar.php" method="get" onsubmit="return calcular()">
                 <h1>Parcelador</h1>
 
-                <i><b>Se quer acessar a segunda atividade acesse link a seguir <a href="AVA02.html"> AVA02</a> e irá para a página secundária do site</b></i>
+                <i><b>Se quer acessar a segunda atividade acesse link a seguir <a href="ava02.html"> ava02</a> e irá para a página secundária do site</b></i>
                 
                 <p>Digite o modelo do veículo</p>
                 <label for="mod">MODELO</label>
                 <br><input type="text" name="mod" id="mod" >
-                <br><label for="prec">PREÇO</label>
+                <br><br><label for="prec">PREÇO</label>
                 <br><input type="number" name="prec" id="prec">
-                <br><label for="parc">PARCELAS</label>
-                <br><input type="number" name="parc" id="parc" min="0" max="36">
-                <br><input type="submit" value="Calcular Parcelas">
+                <br><br><label for="parc">PARCELAS</label>
+                <br><input type="number" name="parc" id="parc" min="1" max="36">
+                <br><br><input type="submit" value="Calcular Parcelas">
                              
             </form>
         </section>
@@ -35,16 +35,28 @@
     <script>
         let resultado = document.getElementById("resultado")
 
-        function calcular () {
+        function calcular() {
             let mod = document.getElementById("mod")
             let prec = Number(document.getElementById("prec").value)
             let parc = Number(document.getElementById("parc").value)
-            let juros = (prec * porc) / parc
-            let porc = 0 
-            if (parc < 5)
-                resultado.innerHTML = `O valor da compra será ${prec}`
-        }
 
+            if (parc <= 4 ) {
+                resultado.innerHTML = `O valor da compra será R$${prec.toFixed(2)} e cada parcela será de R$${(prec/parc).toFixed(2)}`
+            } 
+            else if (parc <= 12 ) {
+                let juros = prec * 0.25
+                resultado.innerHTML = `O valor da compra com juros será ${prec + juros} e cada parcela será de R$${((prec + juros) /parc).toFixed(2)}`
+            }
+            else if (parc <= 24 ) {
+                let juros = prec * 0.60
+                resultado.innerHTML = `O valor da compra com juros será ${prec + juros} e cada parcela será de R$${((prec + juros) /parc).toFixed(2)}` 
+            }
+            else if (parc <= 36 ) {
+                let juros = prec * 0.80
+                resultado.innerHTML = `O valor da sua compra com juros será ${prec + juros} e cada parcela será de R$${((prec + juros) /parc).toFixed(2)}`
+            }
+            return false
+        } 
     </script>
 
 
